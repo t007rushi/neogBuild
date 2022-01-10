@@ -19,5 +19,9 @@ let array = [2,3,4,5,3,2,1,4,9,0]
 
 let res = array.reduce((a,b) =>{return a>b?a:b})
 
-console.log(array)
+// console.log(array)
 
+var temp = require("readline-sync")
+
+let output = temp.question("Enter your name")
+console.log(output)
