@@ -87,7 +87,7 @@
 
     ```
     Input:  32243;
-    Output:  34223
+    Output:  34223   
     ```
 
 1. Write a Program to cyclically Rotate a Number by X positions in the left direction, as provided by the user.

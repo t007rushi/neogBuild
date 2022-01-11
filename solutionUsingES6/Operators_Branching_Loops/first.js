@@ -1,6 +1,6 @@
 
 let sum = (num1=5, num2=13, num3=7, num4=10,num5=10) => {return (num1 + num2 + num3 + num4 + num5)}
-
+var summer = (...rest)=> {rest.reduce((a,b)=> a+b)}
 console.log(sum(2,3,4))
 
 let oddEven = (num) => num%2 !== 0 ? "odd" : "even" 
