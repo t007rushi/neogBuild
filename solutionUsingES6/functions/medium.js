@@ -39,18 +39,24 @@ charAt("neoGcamp", 4)
 //     // date1.setDate(d1)
 //     console.log(date1)
 // }
-const minDate = (d1, d2) => {
+// const minDate = (d1, d2) => {
     // return new Date(d1).getTime() > new Date(d2).getTime() ? d2 : d1;
-    let date1 = new Date(d1);
-    let date2 = new Date(d2);
-    if(date1.getFullYear() == date2.getFullYear()){
-        if(date1.getMonth == date2.getMonth()){
-            if(date1.getDate() == date2.getDate()){
-                return "same date"
-            }else return date1.getDate() > date2.getDate()?date2:date1
-        }else return date1.getMonth() < date2.getMonth()?date1:date2
-    } else{
-     return   date1.getFullYear() > date2.getFullYear()?date2.getDay() :date1.getDay();
-    }
-  }; 
-console.log(minDate('05/02/2021', '01/24/2022'))
+    // let date1 = new Date(d1);
+    // let date2 = new Date(d2);
+//     if(date1.getFullYear() == date2.getFullYear()){
+//         if(date1.getMonth == date2.getMonth()){
+//             if(date1.getDate() == date2.getDate()){
+//                 return "same date"
+//             }else return date1.getDate() > date2.getDate()?date2:date1
+//         }else return date1.getMonth() < date2.getMonth()?date1:date2
+//     } else{
+//      return   date1.getFullYear() > date2.getFullYear()?date2.getDay() :date1.getDay();
+//     }
+//   }; 
+const minDate = (d1, d2) => {
+    let datef = d1.split('/');
+    let dates = d2.split('/');
+    // console.log(datef,dates)
+    return parseInt(datef[2])<parseInt(dates[2])?d1:parseInt(datef[1])<parseInt(dates[1])?d1:parseInt(datef[0])<parseInt(dates[0])?d1:d2;
+}
+console.log(minDate('05/02/2022', '01/01/2022'))

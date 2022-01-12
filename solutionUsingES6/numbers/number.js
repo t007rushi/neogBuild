@@ -45,4 +45,23 @@ function oct2dec(dec){
 // console.log(oct2dec(number))
 
 
-console.log(number.toString().split('').reverse().join(''));
+// console.log(number.toString().split('').reverse().join(''));
+
+
+//Rotation by r
+r = parseInt(req.question("enter rotation"))
+str =""
+console.log(typeof number,typeof r)
+for(i=number.length-1;i>number.length-r-1;i--){
+str += number[i]
+}
+str = str.split('').reverse().join('')
+for(j=0;j<number.length-r;j++)
+{
+    str+=number[j]
+}
+console.log(str)
+
+let [temp1,temp2] = [number.slice(0,r-1),number.slice(r-1,number.length)]
+console.log(temp2+temp1)
+console.log([...temp2,...temp1].join(''))
